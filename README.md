@@ -2,7 +2,7 @@
 
 ## Задача 1
 
-Используя ёDockerё, поднимите инстанс `PostgreSQL (версию 13)`. Данные БД сохраните в volume.
+Используя `Docker`, поднимите инстанс `PostgreSQL (версию 13)`. Данные БД сохраните в volume.
 
 ```bash
 [root@localhost ~]# docker ps
