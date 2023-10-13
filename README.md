@@ -2,7 +2,7 @@
 
 ## Задача 1
 
-Используя ёDockerё, поднимите инстанс ёPostgreSQL (версию 13)ё. Данные БД сохраните в volume.
+Используя ёDockerё, поднимите инстанс `PostgreSQL (версию 13)`. Данные БД сохраните в volume.
 
 ```bash
 [root@localhost ~]# docker ps
@@ -10,7 +10,7 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 1eabdaf23998   postgres:13   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   baldin_pg
 ```
 
-Подключитесь к БД ёPostgreSQLё, используя `psql`.
+Подключитесь к БД `PostgreSQL`, используя `psql`.
 
 ```bash
 [root@localhost ~]# docker exec -ti baldin_pg bash
@@ -316,7 +316,7 @@ Type "help" for help.
 
 postgres=# 
 ```
-Подключитесь к восстановленной БД и проведите операцию ёANALYZEё для сбора статистики по таблице.
+Подключитесь к восстановленной БД и проведите операцию `ANALYZE` для сбора статистики по таблице.
 ```bash
 postgres=# \c test_database
 You are now connected to database "test_database" as user "postgres".
@@ -353,7 +353,7 @@ test_database=# SELECT avg_width FROM pg_stats WHERE tablename='orders';
    > test_database=# CREATE TABLE orders_2 (CHECK (price < 499)) INHERITS (orders);
    > CREATE TABLE
    > ```
-Можно ли было изначально исключить ручное разбиение при проектировании таблицы orders?
+Можно ли было изначально исключить ручное разбиение при проектировании таблицы `orders`?
 
    > *Да, если на этапе проектирования предусмотреть алгоритм шардирования.*
 
