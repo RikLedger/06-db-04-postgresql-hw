@@ -13,7 +13,7 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 Подключитесь к БД `PostgreSQL`, используя `psql`.
 
 ```bash
-[root@localhost ~]# docker exec -ti baldin_pg bash
+[root@localhost ~]# docker exec -ti gorbachev bash
 root@1eabdaf23998:/# psql -U postgres
 psql (13.11 (Debian 13.11-1.pgdg120+1))
 Type "help" for help.
