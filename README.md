@@ -7,7 +7,7 @@
 ```bash
 [root@localhost ~]# docker ps
 CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS          PORTS                                       NAMES
-1eabdaf23998   postgres:13   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   baldin_pg
+1eabdaf23998   postgres:13   "docker-entrypoint.s…"   11 seconds ago   Up 10 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   gorbachev
 ```
 
 Подключитесь к БД `PostgreSQL`, используя `psql`.
@@ -273,8 +273,8 @@ CREATE DATABASE
 
 Восстановите бэкап БД в `test_database`.
 ```bash
-[root@localhost ~]# docker cp ./test_dump.sql baldin_pg:/var/lib/postgresql/data
-Successfully copied 4.1kB to baldin_pg:/var/lib/postgresql/data
+[root@localhost ~]# docker cp ./test_dump.sql gorbachev:/var/lib/postgresql/data
+Successfully copied 4.1kB to gorbachev:/var/lib/postgresql/data
 ```
 ```bash
 root@b0cc6a11f62d:/# psql -U postgres -f /var/lib/postgresql/data/test_dump.sql test_database
